@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <title>LoginPage</title>
+    <style>
+    .btn-color{
+  background-color: #0e1c36;
+  color: #fff;
+  
+}
+.cardbody-color{
+  background-color: #ebf2fa;
+}
+
+a{
+  text-decoration: none;
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+        <div class="row">
+          <div class="col-md-6 offset-md-3">
+            <h2 class="text-center text-dark mt-5">Login</h2>
+            <div class="card my-5">
+    
+              <form class="card-body cardbody-color p-lg-5" method="post" id="child" onsubmit="return false">
+    
+                <div class="mb-3">
+                  <input type="text" class="form-control" id="Username" aria-describedby="emailHelp"
+                    placeholder="User Name" name="username">
+                </div>
+                <div class="mb-3">
+                  <input type="text" class="form-control" id="Password" aria-describedby="emailHelp"
+                    placeholder="password" name="password">
+                </div>
+                <div class="text-center"><button type="submit" class="btn btn-color px-5 mb-5 w-100" onclick="clickBtn()">Login</button></div>
+                </div>
+              </form>
+            </div>
+    
+          </div>
+        </div>
+      </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.14.7/dist/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script type="text/javascript">
+      function clickBtn(){
+        var name = document.getElementById("Username").value;
+        var pwd = document.getElementById("Password").value;
+
+        if(name == "toto"){
+          if(pwd = "titi"){
+            window.location.href = "http://localhost:8080/homepage";
+          }
+          else{
+            alert("Wrong Password")
+          }
+        }
+        else{
+          alert("Incorrect Username")
+        }
+      }
+    </script>
+  </body>
+</html>
